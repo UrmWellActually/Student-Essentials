@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&display=swap');
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, rgb(255, 234, 251), rgb(255, 237, 237));
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif, Arial;
+}
+
+header {
+    grid-area: header;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header nav a{
+    color: black;
+    text-decoration: none;
+}
+
+header nav .small-margin-seperator{
+    margin-left: 15px;
+}
+
+header nav .authenticate-anchor-tags{
+    font-size: 1.1em;
+}
+
+header nav .sign-out-element{
+    display: none;
+}
+
+header .logo {
+    color: transparent;
+    background: linear-gradient(90deg, rgb(20, 188, 255), dodgerblue);
+    background-clip: text;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+main {
+    grid-area: main;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+main .notification{
+    font-size: 2em;
+    display: block;
+    z-index: 1;
+}
+
+main .goal-containers{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px 1fr));
+    gap: 30px;
+}
+
+main .goal-containers .goal{
+    background: linear-gradient(135deg, skyblue, rgb(94, 175, 255));
+    padding: 20px;
+    box-shadow: rgb(0, 128, 255) 10px 10px;
+    position: relative;
+}
+
+main .goal-containers .goal h1{
+    font-family: "Nata Sans", monospace;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+main .goal-containers .goal p{
+    font-family: "Poppins", monospace;
+    font-weight: 500;
+    font-size: 1.25em;
+}
+
+main .goal-containers ion-icon{
+    background: rgba(100, 255, 86, 0.505);
+    position: absolute;
+    padding: 0px 30px;
+    right: 0;
+    top: 0;
+    height: 100%;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 2em;
+}
+
+main .goal-containers ion-icon:hover{
+    background: rgba(21, 255, 0, 0.505);
+    font-size: 2.5em;
+}
+
+main .add-goals-btn{
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    border-radius: 50%;
+    margin-top: 30px;
+    border: none;
+    outline: none;
+    background: orange;
+    font-size: 2em;
+    transition: .5s;
+    cursor: pointer;
+}
+
+main .add-goals-btn:hover{
+    filter: brightness(90%);
+}
+
+main .add-goals{
+    display: none;
+    position: fixed;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    top: 50%;
+    padding: 20px;
+    background: white;
+    box-shadow: rgb(106, 106, 106) -15px 15px;
+    border: 2px solid lightgrey;
+    flex-direction: column;
+    z-index: 10;
+}
+
+main .add-goals input{
+    margin-bottom: 20px;
+    border: 2px solid black;
+    outline: 2px solid black;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 20px 30px;
+    width: 800px;
+}
+
+main .add-goals .close{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background: rgb(255, 136, 136);
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .4s;
+}
+
+main .add-goals .close:hover{
+    filter: brightness(90%);
+}
+
+main .add-goals #submitBtn{
+    padding: 15px;
+    background:orange;
+    border: none;
+    cursor: pointer;
+    transition: .4s;
+    font-size: 1.5em;
+}
+
+main .add-goals #submitBtn:hover{
+    filter: brightness(90%);
+}
+
+footer {
+    grid-area: footer;
+    padding: 20px 30px;
+    text-align: right;
+}
