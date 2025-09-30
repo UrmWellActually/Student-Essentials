@@ -34,7 +34,6 @@ onAuthStateChanged(auth, (user) => {
     const loggedInUserId = localStorage.getItem("loggedInUserId");
     const authBtn = document.querySelector(".login");
     const authTxt = document.querySelector(".auth");
-    const regisP = document.querySelector(".regisP");
 
     authBtn.addEventListener("click", () => {
         window.location.href = "authentication/login.html";
@@ -62,7 +61,6 @@ onAuthStateChanged(auth, (user) => {
 
                 authBtn.classList.replace("login", "sign-out");
                 authTxt.innerText = "Sign Out";
-                regisP.innerText = "Create account";
                 authBtn.addEventListener("click", () => {
                     window.location.href = "sign-out/sign-out.html";
                 });
@@ -90,3 +88,4 @@ noteTakerBtn.addEventListener("click", () => {
 mathQuizBtn.addEventListener("click", () => {
     window.location.href = "math-quiz/math-quiz.html";
 });
+
