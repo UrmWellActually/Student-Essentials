@@ -35,7 +35,7 @@ function generateQuestion(level) {
         case "hard":
             num1 = getRandomNumber(1000, 100000000);
             num2 = getRandomNumber(1000, 100000000);
-            op = "+";
+            op = getRandomOperation();
             break;
     }
 
