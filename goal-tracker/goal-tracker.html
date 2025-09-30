@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="goal-tracker.css" />
+    <title>Student Essentials | Goal Tracker</title>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html" class="logo">Student Essentials</a>
+        <nav class="features">
+            <a href="../calculator/calculator.html">Calculator</a>
+            <a href="../school-events/school-events.html">School Holidays</a>
+            <a href="../goal-tracker/goal-tracker.html">Goal Tracker</a>
+            <a href="../note-taker/note-taker.html">Note Taker</a>
+            <a href="../math-quiz/math-quiz.html">Math Quiz</a>
+            <a href="../authentication/register.html"
+                class="small-margin-seperator authenticate-anchor-tags">Register</a>
+            <a href="../authentication/login.html" class="authenticate-anchor-tags">Login</a>
+            <a href="../sign-out/sign-out.html" class="sign-out-element">...loading</a>
+        </nav>
+    </header>
+    <main>
+        <div class="add-goals">
+            <button class="close">x</button>
+            <input type="text" placeholder="Goal" id="goalInp" />
+            <textarea placeholder="Brief description of goal (optional)" id="desInp"></textarea>
+            <button onClick="submitGoal()" id="submitBtn">Submit</button>
+        </div>
+        <div class="goal-containers"></div>
+        <p class="notification">...Loading your goals</p>
+        <!-- Javascript will add goals here -->
+        </div>
+        <button class="add-goals-btn" onclick="addgoals()">+</button>
+    </main>
+    <footer>
+        <p>@ 2025. A fun project made for STEM Fair.</p>
+    </footer>
+
+    <script type="module" src="goal-tracker.js" defer></script>
+    <script type="module" src="goal-tracker-firebase.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
